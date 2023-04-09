@@ -1,12 +1,14 @@
 package com.vastag.hexagonal.application.core.usecase;
 
 import com.vastag.hexagonal.application.core.domain.Customer;
+import com.vastag.hexagonal.application.ports.in.InsertCustomerInputPort;
 import com.vastag.hexagonal.application.ports.out.FindAddressByZipCodePort;
 import com.vastag.hexagonal.application.ports.out.InsertCustomerPort;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class InsertCustomerUseCase {
+public class InsertCustomerUseCase implements InsertCustomerInputPort {
+
 
     private final FindAddressByZipCodePort findAddressByZipCodePort;
     private final InsertCustomerPort insertCustomerPort;
